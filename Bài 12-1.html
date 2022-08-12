@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>12-1</title>
+</head>
+<body>
+<input type="text" id="arrayinput"><br>
+<button type="button" id="add_to_array" onclick="add_to_array()">Thêm vào mảng</button>
+<button type="button" id="display_array" onclick="display_array()">Hiển thị mảng</button>
+<p id="result"></p>
+<script>
+  let x = 0
+  let array = Array()
+  function add_to_array(){
+    array[x] = document.getElementById('arrayinput').value ;
+    alert('Element :' + array[x] + ' added to index' + x);
+    x++
+    document.getElementById('arrayinput').value = "";
+  }
+  function display_array(){
+    for ( i = 0; i < array.length; i++){
+     document.getElementById('result').innerHTML = array[i] + ' '
+    }
+  }
+</script>
+</body>
+</html>
