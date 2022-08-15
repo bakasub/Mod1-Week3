@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="check">
+<button onclick="checkInput()">Check</button>
+<button onclick="consoleDisplay()">Console</button>
+<script>
+    let arr = []
+    let x = +document.getElementById('check').value
+    let y = true
+    for (let i = 0; i < 10; i++) {
+        arr.push(prompt())
+
+    }
+
+    function checkInput() {
+        for (let j = 0; j < arr.length; j++) {
+            if (x == arr[j]) {
+                arr.splice(arr[j], 1)
+                y = true
+            } if (x != arr[j]){
+                y = false
+            }
+        }
+        if (y=false){
+            alert('Khong co V trong array')
+        }
+    }
+    function consoleDisplay(){
+        console.log(arr)
+    }
+</script>
+
+</body>
+</html>

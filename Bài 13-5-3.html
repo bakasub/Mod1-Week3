@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let arr = [5, 23, 4, 1, 15, 94, 7, 3, 35, 14]
+  let max = arr[0]
+  let temp = 0
+  //let avg
+  for ( i = 0; i < arr.length; i++){
+    if ( max < arr[i]){
+      max = arr[i]
+    }
+    temp = temp + arr[i]
+  }
+  console.log(max)
+  document.write((temp/10))
+</script>
+</body>
+</html>

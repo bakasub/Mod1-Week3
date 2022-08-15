@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let number = prompt()
+  let convert = number.toString()
+  let result = [convert[0]]
+  for (let i=1; i<convert.length;i++){
+    if (convert[i-1]%2===0 && convert[i]%2===0){
+      result.push('-', convert[i])
+    } else {
+      result.push(convert[i])
+    }
+  }
+  document.write(result.join(''))
+</script>
+</body>
+</html>

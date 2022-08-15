@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Nhập từ</p>
+<input type="text" id="textinput">
+<button onclick="trans()">Dịch</button>
+<br>
+<p id="result"></p>
+
+<script>
+    let eng = ['orange', 'banana']
+    let vie = ['cam', 'chuoi']
+
+    function trans() {
+        let x = document.getElementById('textinput').value;
+        for (let i = 0; i < eng.length; i++) {
+            if (x === eng[i]) {
+                document.getElementById('result').innerHTML = vie[i]
+            }   else
+            {
+              document.getElementById('result').innerHTML = 'Không tìm thấy'
+            }
+
+        }
+
+    }
+</script>
+</body>
+</html>
