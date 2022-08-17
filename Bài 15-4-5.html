@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function leastNumber(){
+    let a = +prompt('a')
+    let b = +prompt('b')
+    let c = +prompt('c')
+    let min = a
+    if (a > b ){
+      min = b
+      if (b > c){
+        min = c
+      }
+    }else {
+      if (a > c){
+        min = c
+      }
+    }
+    document.write(min)
+  }
+  leastNumber()
+</script>
+</body>
+</html>

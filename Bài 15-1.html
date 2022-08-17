@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let numInput = prompt();
+  isPrime()
+
+  function isPrime(){
+      for ( let i=2; i<numInput; i++){
+          for (let checkSNT = 2; checkSNT < numInput; checkSNT++){
+              if (numInput%checkSNT===0){
+                  isPrime = false
+              }
+              }
+          }     if (isPrime){
+          alert('Số nhập là SNT')
+      }else{
+          alert('Số nhập không phải là SNT')
+
+      }
+
+  }
+</script>
+</body>
+</html>

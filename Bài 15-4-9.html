@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function arrayX(arr, x){
+    let count = 0
+    for ( let i = 0; i < arr.length; i++){
+      if ( x == arr[i]){
+        count ++
+      }
+    }
+    if ( count > 0) {
+      return count
+    }
+    else {
+      return -1
+    }
+
+  }
+  let arrInput = [123,53,51,35,59,53]
+  console.log(arrayX(arrInput, 50))
+</script>
+</body>
+</html>
