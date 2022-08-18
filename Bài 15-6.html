@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isPalindrome(){
+        let a = prompt()
+        let count = 0
+        console.log(a.length)
+        for ( let i = 0; i < a.length; i++ ){
+            if ( a[i] === a[a.length -1 - i]){
+                count++
+            }
+        }
+        if (count === a.length){
+            alert('The word is palindrome')
+        }else {
+            alert('The word is not palindrome')
+        }
+    }
+    isPalindrome()
+</script>
+</body>
+</html>

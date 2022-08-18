@@ -8,8 +8,39 @@
 <h2>Add new product</h2>
 <input type="text" id="productInput" placeholder="New product">
 <button onclick="addProduct()">Add</button>
+<button onclick="displayProduct()">Display</button>
 <h2>Display All Products</h2>
+<table id="tableX" style="width: 400px"></table>
 <script>
+    let arr = ['Product1', 'Product2', 'Product3', 'Product4']
+
+    function addProduct() {
+        arr.push(document.getElementById('productInput').value)
+        document.getElementById('productInput').value = ''
+    }
+
+    function displayProduct() {
+        let str = ''
+        for (let i = 0; i < arr.length; i++) {
+            str += ('<tr>' + '<td>' + arr[i] + '</td>' +
+                '<td>' + `<button onclick="editProduct(` + i + `)">Edit</button>` + '</td>' +
+                '<td>' + `<button onclick="removeProduct(` + i + `)" >Delete</button>` + '</td>')
+
+
+        }
+        document.getElementById('tableX').innerHTML = str
+    }
+
+    function editProduct(index) {
+        let str = prompt('Nhap ten san pham muon thay the', arr[index])
+        arr[index] = str
+        displayProduct()
+    }
+
+    function removeProduct(index) {
+        arr.splice(index, 1)
+        displayProduct()
+    }
 
 </script>
 </body>
